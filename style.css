@@ -1,43 +1,50 @@
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-    font-size: 15px;
-    background-color: #eee;
-    color: #444;
+.accordion-header {
+    font-size:18px;
+    font-weight: bold;
+    background-color: rgb(160, 115, 202);
+    color: white;
     cursor: pointer;
     padding: 18px;
     width: 850px;
     text-align: left;
     border: none;
-    outline: none;
     transition: 0.4s;
+    margin: 10px 0px;
 }
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: #ccc;
+.active, .accordion-header {
+    background-color:rgb(160, 115, 202);
 }
-  
-  /* Style the accordion panel. Note: hidden by default */
 .accordion-content {
     padding: 0 18px;
-    background-color: white;
+    background-color: rgb(160, 115, 202);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+.accordion-content .avatar input{
+    width: 150px;
+    height: 110px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 17px;
+}
+/* .accordion-content .inputs{
+    display: block;
+} */
 .accordion-content input{
-    margin: 10px auto;
-    padding: 9px 3px;
+    margin: 2px 5px;
+    padding: 9px 9px;
     background-color: white;
-    width: 180px;
+    width: 165px;
+    font-weight: bold;
 }
-.accordion:after {
-    content: '+'; /* Unicode character for "plus" sign (+) */
+.accordion-header:after {
+    content: '+'; 
     font-size: 24px;
-    color: #777;
+    color: white;
     position: relative;
-    margin-left: 730px;
-}
-  
+    margin-left: 760px;
+} 
 .active:after {
-    content: "-"; /* Unicode character for "minus" sign (-) */
+    content: "-"; 
 }
