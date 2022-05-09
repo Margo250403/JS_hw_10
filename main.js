@@ -71,9 +71,6 @@ function createAccordion(accordionSelector, data) {
         const avatar = document.createElement("div");
         const inputs = document.createElement("div");
 
-        //add events
-        // title.onclick = dropDown;
-
         //add classes
         title.className = "accordion-header";
         content.className = "accordion-content hide";
@@ -83,11 +80,11 @@ function createAccordion(accordionSelector, data) {
         //insert html
         title.innerHTML = item.name;
         avatar.innerHTML =
-            `<div class="avatar">
-        <input type="text" textarea="Avatar" placeholder="Avatar" />
-      </div>`
+        `<div class="avatar">
+            <input type="text" textarea="Avatar" placeholder="Avatar" />
+        </div>`
         inputs.innerHTML =
-            ` <p>
+        ` <p>
           <input class="input inn" type="text" placeholder="inn" />
           <input class="input name" type="text" placeholder="name" />
           <input class="input age" type="text" placeholder="age" />
