@@ -121,7 +121,7 @@ function fullInputs() {
   //add value for inputs
   const div = document.querySelector(".inputs");
   div.addEventListener("click", () => {
-  inputs = document.querySelectorAll(".input");
+  const inputs = document.querySelectorAll(".input");
   inputs.forEach((element, index) => {
     if (element.classList.contains("inn")) {
       element.value = `${users[index].inn}`;
