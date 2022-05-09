@@ -9,29 +9,54 @@
     outline: none;
     transition: 0.4s;
 }
-
 .active, .accordion-header:hover {
     background-color: rgb(213, 111, 233);
 }
-  
+
 .accordion-content {
     padding: 0 18px;
     background-color: white;
-    max-height: 0;
     overflow: hidden;
+    height: 0;
     transition: max-height 0.2s ease-out;
+    margin-top: 18px;
+    background-color: rgb(213, 111, 233);
+    display: flex;
+    gap: 25px;
+}
+.accordion-content .avatar input {
+    width: 150px;
+    height: 125px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.accordion-content .inputs{
+    display: flex;
+    gap: 15px;
+} 
+.accordion-content .inputs input {
+    margin: 5px 5px;
+    padding: 9px 9px;
+    background-color: white;
+    width: 165px;
+    font-weight: bold;
+}
+.active .accordion-content{
+    height: auto;
 }
 
-.accordion-header::after {
+.accordion-header::before {
     content: '\0279C';
     font-size: 24px;
     color: white;
-    float: right;
+    position: absolute;
+    margin-left: 615px;
 }
-  
-.active::after {
+
+.active::before{
     content: "\0279C";
-    transform: rotate(90deg); 
-} 
+    transform: rotate(90deg);
+}
 
 
