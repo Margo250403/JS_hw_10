@@ -1,50 +1,38 @@
 .accordion-header {
-    font-size:18px;
-    font-weight: bold;
-    background-color: rgb(160, 115, 202);
-    color: white;
+    background-color: #eee;
+    color: #444;
     cursor: pointer;
     padding: 18px;
-    width: 850px;
+    width: 950px;
     text-align: left;
     border: none;
+    outline: none;
     transition: 0.4s;
-    margin: 10px 0px;
 }
-.active, .accordion-header {
-    background-color:rgb(160, 115, 202);
+
+.active, .accordion-header:hover {
+    background-color: #ccc;
 }
+  
 .accordion-content {
     padding: 0 18px;
-    background-color: rgb(160, 115, 202);
+    background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-.accordion-content .avatar input{
-    width: 150px;
-    height: 110px;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 17px;
-}
-/* .accordion-content .inputs{
-    display: block;
-} */
-.accordion-content input{
-    margin: 2px 5px;
-    padding: 9px 9px;
-    background-color: white;
-    width: 165px;
-    font-weight: bold;
-}
-.accordion-header:after {
-    content: '+'; 
+  
+.accordion-header::after {
+    content: '\0279C';
     font-size: 24px;
     color: white;
-    position: relative;
-    margin-left: 760px;
-} 
-.active:after {
-    content: "-"; 
+    float: right;
+    margin-left: 5px;
 }
+  
+.active::after {
+    content: "\0279C";
+    transform: rotate(90deg); 
+}
+
+
