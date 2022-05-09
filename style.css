@@ -1,9 +1,9 @@
 .accordion-header {
-    background-color: #eee;
-    color: #444;
+    background-color: rgb(194, 71, 219);
+    color: white;
     cursor: pointer;
     padding: 18px;
-    width: 950px;
+    width: 650px;
     text-align: left;
     border: none;
     outline: none;
@@ -11,7 +11,7 @@
 }
 
 .active, .accordion-header:hover {
-    background-color: #ccc;
+    background-color: rgb(213, 111, 233);
 }
   
 .accordion-content {
@@ -21,18 +21,18 @@
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-  
+
 .accordion-header::after {
     content: '\0279C';
     font-size: 24px;
     color: white;
-    float: right;
-    margin-left: 5px;
+    position: absolute;
+    margin-left: 590px;
 }
   
 .active::after {
     content: "\0279C";
     transform: rotate(90deg); 
-}
+} 
 
 
